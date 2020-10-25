@@ -61,8 +61,8 @@ describe('Construct', function () {
   /*eslint no-undef: "error"*/
   it('Construct the binance object', function (done) {
     binance.options({
-      APIKEY: '5enQYcMQk2J3syHCao9xgJOnnPoGtDMhSRRAzG2Gxo90TBzXPG1itcXikQc2VRDh',
-      APISECRET: 'uWJQXigS3AjftKe8c6xK2t3rkTqkmfeeNPwcycBLGXXsuU4eUvLkPY9qcOnB2UYI',
+      APIKEY: 'vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A',
+      APISECRET: 'NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j',
       useServerTime: true,
       reconnect: false,
       verbose: true,
@@ -144,6 +144,10 @@ describe('All Prices', function () {
 describe('Balances', function () {
   it('Get the balances in the account', function (done) {
     binance.balance((error, balances) => {
+      logger.log("ERRORS:");
+      logger.log(error);
+      logger.log("BALANCES:");
+      logger.log(balances);
       debug(error);
       debug(balances);
       assert(error === null, WARN_SHOULD_BE_NULL);
