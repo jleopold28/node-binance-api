@@ -24,8 +24,8 @@ let Binance = require(path.resolve(__dirname, 'node-binance-api.js'));
 let binance = new Binance();
 let util = require('util');
 
-let num_pairs = 299;
-let num_currencies = 155;
+let num_pairs = 105;
+let num_currencies = 52;
 
 let logger = {
   log: function (msg) {
